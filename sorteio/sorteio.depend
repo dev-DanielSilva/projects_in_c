@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1773597766 source:c:\users\daniel silva\desktop\projetos em c\sorteio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

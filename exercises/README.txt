@@ -1,0 +1,1 @@
+Este diretório conta com todos os exercícios feitos durante as aulas da discplina ICC da USP São Carlos.

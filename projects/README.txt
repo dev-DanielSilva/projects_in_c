@@ -1,0 +1,1 @@
+Este diretório conta com todos os projetos feitos para as aulas da discplina ICC da USP São Carlos.

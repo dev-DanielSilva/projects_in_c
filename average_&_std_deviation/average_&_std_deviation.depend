@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1776368419 source:c:\users\daniel silva\desktop\usp\projects_in_c\average_&_std_deviation\main.c
-	<stdio.h>
-	<stdlib.h>
-	<math.h>
-

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1775846040 source:c:\users\daniel silva\desktop\usp\projects_in_c\read_n_show_strings\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-

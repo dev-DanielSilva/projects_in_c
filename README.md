@@ -18,8 +18,8 @@ Os projetos são estruturados para funcionar de forma consistente em diferentes 
 * **Compilador:** `gcc` (GNU Compiler Collection).
 
 ## 📂 Estrutura do Repositório
-* `exercicios/`: Problemas de lógica e sintaxe básica.
-* `trabalhos/`: Projetos práticos e avaliações de maior complexidade.
+* `exercises/`: Problemas de lógica e sintaxe básica.
+* `projects/`: Projetos práticos e avaliações de maior complexidade.
 
 ---
 <p align="center">

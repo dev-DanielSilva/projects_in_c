@@ -30,7 +30,7 @@ int main()
         }
         else {
             num = atoi(txt);
-            vetor2[count] = num;`
+            vetor2[count] = num;
             count++;
         }
     }

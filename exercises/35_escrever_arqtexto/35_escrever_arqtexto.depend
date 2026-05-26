@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1779459339 source:c:\users\daniel silva\desktop\usp\projects_in_c\exercises\35_escrever_arqtexto\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

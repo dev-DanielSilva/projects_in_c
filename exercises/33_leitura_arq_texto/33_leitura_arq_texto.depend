@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1779457055 source:c:\users\daniel silva\desktop\usp\projects_in_c\33_leitura_arq_texto\main.c
+	<stdio.h>
+	<stdlib.h>
+

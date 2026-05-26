@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1778889464 source:c:\users\daniel silva\desktop\usp\projects_in_c\32_criptografia_circular\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

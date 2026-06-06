@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1780694279 source:c:\users\daniel silva\desktop\usp\projects_in_c\exercises\projeto_fisica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+
+1780707736 source:c:\users\daniel silva\desktop\usp\projects_in_c\projects\projeto_fisica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+
+1780695175 c:\raylib\w64devkit\include\raylib.h
+	<stdarg.h>
+	<stdbool.h>
+
+1780695175 c:\raylib\w64devkit\include\stdarg.h
+	<_mingw_stdarg.h>
+
+1780695176 c:\raylib\w64devkit\include\_mingw_stdarg.h
+	<vadefs.h>
+
+1780695175 c:\raylib\w64devkit\include\vadefs.h
+	<_mingw.h>
+
+1780695176 c:\raylib\w64devkit\include\_mingw.h
+	"_mingw_mac.h"
+	"_mingw_secapi.h"
+	"_cygwin.h"
+	<vadefs.h>
+
+1780695176 c:\raylib\w64devkit\include\_mingw_mac.h
+
+1780695176 c:\raylib\w64devkit\include\_mingw_secapi.h
+
+1780695176 c:\raylib\w64devkit\include\_cygwin.h
+	<stddef.h>
+
+1780695175 c:\raylib\w64devkit\include\stddef.h
+	<crtdefs.h>
+
+1780695173 c:\raylib\w64devkit\include\crtdefs.h
+	<corecrt.h>
+
+1780695173 c:\raylib\w64devkit\include\corecrt.h
+	<_mingw.h>
+	<winapifamily.h>
+
+1780695176 c:\raylib\w64devkit\include\winapifamily.h
+

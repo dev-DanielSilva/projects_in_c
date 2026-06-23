@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1781976934 source:c:\users\daniel silva\desktop\usp\icc\projects_in_c\exercises\39_calloc\main.c
+	<stdio.h>
+	<stdlib.h>
+

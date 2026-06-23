@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1781977013 source:c:\users\daniel silva\desktop\usp\primeiro período\icc\projects_in_c\exercises\39_calloc\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1782222066 source:c:\users\daniel silva\desktop\usp\primeiro período\icc\projects_in_c\exercises\41_calloc_string\41_calloc_string\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1782222376 source:c:\users\daniel silva\desktop\usp\primeiro período\icc\projects_in_c\exercises\41_calloc_string\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

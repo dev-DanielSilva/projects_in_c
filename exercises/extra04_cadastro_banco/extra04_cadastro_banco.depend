@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1782238957 source:c:\users\daniel silva\desktop\usp\primeiro período\icc\projects_in_c\exercises\extra04_cadastro_banco\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -18,58 +18,61 @@ int main() {
 
     SetTargetFPS(60);
 
-    // Loop principal do programa
     while (!WindowShouldClose()) {
-
-        if (IsKeyPressed(KEY_W)) {
-            aceleracao += 0.01f;
+        float dt = GetFrameTime();
+        if (IsKeyDown(KEY_W)) {
+            aceleracao += 2.0f * dt;
         }
-        else if (IsKeyPressed(KEY_S)) {
-            aceleracao -= 0.01f;
+        else if (IsKeyDown(KEY_S)) {
+            aceleracao -= 2.0f * dt;
         }
         else if (IsKeyPressed(KEY_SPACE)) {
             aceleracao = 0.0f;
         }
-
-        // ---- LÓGICA DA FÍSICA ----
-        velocidade += velocidade * aceleracao;
-        posicao = posicao + velocidade;
+        if (!IsKeyDown(KEY_W) && !IsKeyDown(KEY_S)) {
+            // Reduz a velocidade gradualmente com base no tempo (dt)
+            // O valor 2.0f controla a "força" do atrito (quanto maior, mais rápido ele para)
+            if (velocidade > 0) {
+                velocidade -= 2.0f * dt;
+                if (velocidade < 0) velocidade = 0; // Impede que o atrito faça o bloco andar para trás
+            }
+            else if (velocidade < 0) {
+                velocidade += 2.0f * dt;
+                if (velocidade > 0) velocidade = 0; // Impede que o atrito faça o bloco andar para a frente
+            }
+        }
+        velocidade += aceleracao * dt;
+        posicao += velocidade * dt;
 
         if (posicao >= limite_direito) {
             posicao = limite_direito;
-            velocidade = velocidade * -1;
+            velocidade = -velocidade * 0.6f;
         }
         else if (posicao <= limite_esquerdo) {
             posicao = limite_esquerdo;
-            velocidade = velocidade * -1;
+            velocidade = -velocidade * 0.6f;
         }
 
-        // ---- RENDERIZAÇÃO (INTERFACE GRÁFICA) ----
         BeginDrawing();
-            ClearBackground(RAYWHITE); // Limpa a tela com fundo branco
+            ClearBackground(RAYWHITE);
 
-            // Exibe as informações de texto na tela
             DrawText(TextFormat("Posicao: %.2f | Velocidade: %.2f | Aceleracao: %.2f", posicao, velocidade, aceleracao), 20, 20, 20, DARKGRAY);
             DrawText("Use W/S para acelerar/desacelerar e ESPACO para zerar a aceleracao", 20, 50, 18, MAROON);
 
-            // Desenha as "paredes" de limite (linhas verticais)
             int posX_limite_esquerdo = (limite_esquerdo * escalaX) + deslocamentoX;
             int posX_limite_direito = (limite_direito * escalaX) + deslocamentoX + tamanhoBloco;
 
             DrawLine(posX_limite_esquerdo, 150, posX_limite_esquerdo, 250, BLACK);
             DrawLine(posX_limite_direito, 150, posX_limite_direito, 250, BLACK);
 
-            // Calcula a posição atual do bloco na tela gráfica
             int blocoX = (int)(posicao * escalaX) + deslocamentoX;
-            int blocoY = 190; // Altura fixa para o bloco se mover horizontalmente
+            int blocoY = 190;
 
-            // Desenha o bloco (representando o seu 'X')
             DrawRectangle(blocoX, blocoY, tamanhoBloco, tamanhoBloco, BLUE);
 
         EndDrawing();
     }
 
     CloseWindow();
-
     return 0;
 }

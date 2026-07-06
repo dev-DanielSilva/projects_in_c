@@ -2,26 +2,21 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="projeto_fisica_com_interface" />
+		<Option title="03_gerenciador_senha" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/projeto_fisica_com_interface" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/03_gerenciador_senha" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="../../../../../../../../raylib/w64devkit/include" />
 				</Compiler>
-				<Linker>
-					<Add option="-lraylib -lopengl32 -lgdi32 -lwinmm" />
-					<Add directory="../../../../../../../../raylib/w64devkit/lib" />
-				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/projeto_fisica_com_interface" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/03_gerenciador_senha" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1783292940 source:c:\users\daniel silva\desktop\usp\primeiro período\icc\projects_in_c\projects\03_gerenciador_senha\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

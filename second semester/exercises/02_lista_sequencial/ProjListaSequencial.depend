@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1789666596 source:/home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/02_lista_sequencial/CodeBlocks/ListaSequencial.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"ListaSequencial.h"
+
+1789666225 /home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/02_lista_sequencial/CodeBlocks/ListaSequencial.h
+
+1789667498 source:/home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/02_lista_sequencial/CodeBlocks/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaSequencial.h"
+

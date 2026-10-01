@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1790878257 source:/home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/05_merge_sort/PilhaDin.c
+	<stdio.h>
+	<stdlib.h>
+	"PilhaDin.h"
+
+1790862043 /home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/05_merge_sort/PilhaDin.h
+
+1790879150 source:/home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/05_merge_sort/main.c
+	<stdio.h>
+	<stdlib.h>
+	"PilhaDin.h"
+

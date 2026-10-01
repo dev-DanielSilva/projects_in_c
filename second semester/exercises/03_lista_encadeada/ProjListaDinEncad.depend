@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1789671301 source:/home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/03_lista_encadeada/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaDinEncad.h"
+
+1789670007 /home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/03_lista_encadeada/ListaDinEncad.h
+
+1789671222 source:/home/dev-danielsilva/Desktop/projects_in_c/second semester/exercises/03_lista_encadeada/ListaDinEncad.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"ListaDinEncad.h"
+

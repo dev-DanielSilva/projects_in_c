@@ -1,0 +1,5 @@
+Site:
+Serie de dados do Dolar
+https://br.investing.com/currencies/usd-brl-historical-data
+
+> Criando um login, é possível baixar os dados (em CSV)

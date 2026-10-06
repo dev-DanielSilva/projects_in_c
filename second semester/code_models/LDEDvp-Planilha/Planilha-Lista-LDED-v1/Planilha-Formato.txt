@@ -1,0 +1,13 @@
+Linha Coluna TipoCelula Dado
+  1     1        0      "12345"
+  2     1        0      "45678"
+ 10    10        2      "By-FOSORIO"
+
+
+
+
+-1= 1o. nodo
+0 = Inteiro                 "12345"
+1 = Pto. Flutuante (float)  "1.234"
+2 = String                  "xpto"
+3 = Formula                 "@..."

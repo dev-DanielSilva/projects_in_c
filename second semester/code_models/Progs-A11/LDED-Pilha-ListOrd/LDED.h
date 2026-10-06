@@ -1,4 +1,4 @@
-//Arquivo ListaDinEncad.h
+//Arquivo LDED.h - Lista Dinamica Encadeada Dupla
 
 #define FALSO      0
 #define VERDADEIRO 1
@@ -6,10 +6,14 @@
 #define OK         1
 #define ERRO       0
 
-typedef int Tipo_Dado;
+typedef struct {
+            int    seq;
+            float valor;
+}  Tipo_Dado;
 
-//Definição do tipo lista
+//DefiniÃ§Ã£o do tipo lista
 struct elemento{
+    struct elemento *ant;
     Tipo_Dado dado;
     struct elemento *prox;
 };
@@ -20,15 +24,16 @@ typedef struct elemento* Lista;
 
 Lista* cria_lista();
 void libera_lista(Lista* li);
+int consulta_lista_pos(Lista* li, int pos, Tipo_Dado *dt);
+int consulta_lista_dado(Lista* li, Tipo_Dado dt, Elem **el);
 int insere_lista_final(Lista* li, Tipo_Dado dt);
 int insere_lista_inicio(Lista* li, Tipo_Dado dt);
 int insere_lista_ordenada(Lista* li, Tipo_Dado dt);
 int remove_lista(Lista* li, Tipo_Dado dt);
 int remove_lista_inicio(Lista* li);
 int remove_lista_final(Lista* li);
+int empilha_lista(Lista* li, Tipo_Dado dt);
+int desempilha_lista(Lista* li, Tipo_Dado *dt);
 int tamanho_lista(Lista* li);
 int lista_vazia(Lista* li);
-int lista_cheia(Lista* li);
 void imprime_lista(Lista* li);
-int consulta_lista_dado(Lista* li, Tipo_Dado dt, Elem **el);
-int consulta_lista_pos(Lista* li, int pos, Elem **el);

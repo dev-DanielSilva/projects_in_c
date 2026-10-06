@@ -1,0 +1,14 @@
+LDED-Fila-2ptr
+  Programa que cria fila com 2 ponteiros: li (lista inicio) e lf (lista fim)
+  Otimizado para inserção e remoção de dados em filas
+  Exibe: do final (inicio da fila) para o inicio (fim da fila) da lista
+
+LDED-Duas-Filas 
+   Programa que cria 2 filas separadas com LI (lista inicio) e LF (lista fim)
+
+LDED-Pilha-ListOrd
+   Programa que insere dados de 2 arquivos em 2 listas ordenadas
+   Depois, considera cada lista como uma pilha, e faz o merge sort das pilhas 
+   Merge Sort é a união ordenada das pilhas usando push/pop 
+   Cria uma 3a pilha ordenada (resultado do merge sort)
+   E por fim uma 4a. pilha que inverte a ordem da pilha 3 (usando push/pop)

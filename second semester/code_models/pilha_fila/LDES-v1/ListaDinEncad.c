@@ -4,7 +4,9 @@
 
 Lista* cria_lista()
 {
-    Lista* li = (Lista*) malloc(sizeof(Lista));
+    Lista* li;
+
+    li = (Lista*) malloc(sizeof(Lista));
     if(li != NULL)
         *li = NULL;
     return li;
@@ -43,9 +45,11 @@ int consulta_lista_pos(Lista* li, int pos, Elem **el)
 
 int consulta_lista_dado(Lista* li, Tipo_Dado dt, Elem **el)
 {
+    Elem *no;
+
+    no = *li;
     if(li == NULL)
         return ERRO;
-    Elem *no = *li;
     while(no != NULL && no->dado != dt){
         no = no->prox;
     }
@@ -59,20 +63,20 @@ int consulta_lista_dado(Lista* li, Tipo_Dado dt, Elem **el)
 
 int insere_lista_final(Lista* li, Tipo_Dado dt)
 {
-    if(li == NULL)
-        return ERRO;
     Elem *no;
+
+    if (li == NULL) return ERRO;
     no = (Elem*) malloc(sizeof(Elem));
-    if(no == NULL)
-        return ERRO;
+    if (no == NULL) return ERRO;
+
     no->dado = dt;
     no->prox = NULL;
-    if((*li) == NULL){ //lista vazia: insere início
+    if ((*li) == NULL) { //lista vazia: insere início
         *li = no;
-    }else{
+    } else {
         Elem *aux;
         aux = *li;
-        while(aux->prox != NULL){
+        while (aux->prox != NULL) {
             aux = aux->prox;
         }
         aux->prox = no;
@@ -82,41 +86,43 @@ int insere_lista_final(Lista* li, Tipo_Dado dt)
 
 int insere_lista_inicio(Lista* li, Tipo_Dado dt)
 {
-    if(li == NULL)
-        return ERRO;
     Elem* no;
+
+    if (li == NULL) return ERRO;
     no = (Elem*) malloc(sizeof(Elem));
-    if(no == NULL)
-        return ERRO;
+    if (no == NULL) return ERRO;
+
     no->dado = dt;
     no->prox = (*li);
     *li = no;
+
     return OK;
 }
 
 int insere_lista_ordenada(Lista* li, Tipo_Dado dt)
 {
-    if(li == NULL)
-        return ERRO;
+    if (li == NULL) return ERRO;
     Elem *no = (Elem*) malloc(sizeof(Elem));
-    if(no == NULL)
-        return ERRO;
+    if (no == NULL) return ERRO;
+
     no->dado = dt;
-    if((*li) == NULL){ //lista vazia: insere início
+    if ((*li) == NULL) { //lista vazia: insere início
         no->prox = NULL;
         *li = no;
         return OK;
     }
-    else{
+    else {
         Elem *ant, *atual = *li;
-        while(atual != NULL && atual->dado < dt){
+        while (atual != NULL && atual->dado < dt) {
             ant = atual;
             atual = atual->prox;
         }
-        if(atual == *li){ //insere início
+        if (atual == *li) { //insere início
             no->prox = (*li);
             *li = no;
-        }else{
+        }
+        else
+        {
             no->prox = atual;
             ant->prox = no;
         }
@@ -124,6 +130,75 @@ int insere_lista_ordenada(Lista* li, Tipo_Dado dt)
     }
 }
 
+// Novas rotinas: Insere Antes e Insere Depois
+int insere_lista_antes(Lista* li, Tipo_Dado dt, Elem **el)
+{
+    if (li == NULL) return ERRO;
+    Elem *no = (Elem*) malloc(sizeof(Elem));
+    if (no == NULL) return ERRO;
+
+    no->dado = dt;
+    if ((*el == NULL) && (*li==NULL))  { //lista vazia: insere início
+        no->prox = NULL;
+        *li = no;
+        *el = no;
+        return OK;
+    }
+    else
+    {
+        Elem *ant, *atual = *li;
+        while (atual != NULL && atual != *el) {  // Acha o nodo e seu anterior
+            ant = atual;
+            atual = atual->prox;
+        }
+
+        if (atual != *el) // Ops: nao achou o nodo de referencia para insercao!
+            return ERRO;
+
+        if (atual == *li) { //insere antes (no inicio da lista)
+            no->prox = (*li);
+            *li = no;
+            *el = no;
+        }
+        else
+        {
+            no->prox = atual;
+            ant->prox = no;
+            *el = no;
+        }
+        return OK;
+    }
+}
+
+int insere_lista_depois(Lista* li, Tipo_Dado dt, Elem **el)
+{
+    Elem *no;
+
+    if (li == NULL) return ERRO;
+    no = (Elem*) malloc(sizeof(Elem));
+    if (no == NULL) return ERRO;
+
+    no->dado = dt;
+    if ((*el == NULL) && (*li==NULL))  // Lista vazia
+       no->prox = NULL;
+    else
+       if ((*el == NULL) || (*li==NULL))  // Inconsistencia nos parametros (ponteiros) da rotina
+           return(ERRO);
+
+    if ((*li) == NULL) { // Lista vazia: insere início
+        *li = no;
+        *el = no;
+    }
+    else
+    {
+        no->prox  = (*el)->prox;
+        (*el)->prox = no;
+        *el = no;
+    }
+    return OK;
+}
+
+//
 int remove_lista(Lista* li, Tipo_Dado dt)
 {
     if(li == NULL)
